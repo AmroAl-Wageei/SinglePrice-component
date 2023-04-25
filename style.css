@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+:root {
+  /* ### Primary */
+
+  --Cyan: hsl(179, 62%, 43%);
+  --Cyan-light: hsl(179, 35%, 66%);
+
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* ### Neutral */
+
+  --Light0Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: var(--Light0Gray);
+}
+.container {
+  width: 600px;
+  height: 500px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  grid-template-rows: 200px 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  box-shadow: 1px 1px 5px var(--Grayish-Blue);
+}
+
+.container .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  justify-content: space-between;
+  padding: 20px;
+}
+.container .top h1 {
+  color: var(--Cyan);
+  font-weight: 700;
+}
+.container .top h3 {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+}
+.container .top p {
+  color: var(--Grayish-Blue);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.container .bottom {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+.container .bottom .left {
+  background-color: var(--Cyan);
+  width: 90%;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+  justify-content: left;
+  justify-content: space-evenly;
+  padding: 30px;
+  color: white;
+}
+
+.container .bottom .left h3 {
+  font-size: 16px;
+}
+.container .bottom .left:first-child p {
+  font-size: 24px;
+  font-weight: 700;
+}
+.container .bottom .left:first-child p span {
+  font-size: 13px;
+  color: #f7f7f7;
+  font-weight: 400;
+  margin-left: 6px;
+}
+.container .bottom .left div {
+  font-size: 16px;
+  color: #f7f7f7;
+}
+.container .bottom .left button {
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding: 15px;
+  background-color: var(--Bright-Yellow);
+  color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container .bottom .right {
+  background-color: var(--Cyan-light);
+  border-bottom-right-radius: 5px;
+
+  width: 90%;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 30px;
+  color: white;
+}
+
+.container .bottom .right h3 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.container .bottom .right p {
+  font-size: 14px;
+  color: #f7f7f7;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 300px 300px 300px;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    /* align-items: center; */
+    /* background-color: aquamarine; */
+  }
+  .container .bottom {
+    /* display: grid;
+    grid-template-columns: 330px;
+    grid-template-rows: 300px 300px; */
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 91%;
+  }
+
+  .container .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+  }
+  .container .top h1 {
+    color: var(--Cyan);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .container .top h3 {
+    color: var(--Bright-Yellow);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .container .top p {
+    color: var(--Grayish-Blue);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+}
